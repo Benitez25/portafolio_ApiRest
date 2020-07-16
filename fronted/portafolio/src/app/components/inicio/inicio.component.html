@@ -1,0 +1,21 @@
+<div class="banner">
+
+</div>
+<div class="date">
+    <i class="fas fa-home h"></i>
+    <i class="fab fa-amazon-pay t"></i>
+    <i class="far fa-smile-beam ha" ></i>
+</div>
+<div class="projects">
+    <ul>
+        <li *ngFor="let projct of projects">
+            <a [routerLink]="['/projecto',projct._id]">
+                <img src="{{url+'getImagen/'+projct.image}}" >
+                <h1>{{projct.name}}</h1>
+                <h4>{{projct.technology}}</h4>
+                
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="new" [routerLink]="['/crear']">{{message}}&nbsp;<i class="fas fa-plus-square"></i></div>
